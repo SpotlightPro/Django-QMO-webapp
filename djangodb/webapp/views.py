@@ -41,12 +41,3 @@ def join(request):
         return redirect('home')
     else:
         return render(request, 'join.html', {})
-
-
-def area(request):
-    return render(request, 'area.html', {})
-
-
-def audits(request):
-    all_audits = Audit.objects.all
-    return render(request, 'audits.html', {'all_audits':all_audits})
